@@ -1,0 +1,70 @@
+{
+  "hero": {
+    "first": "Arnim",
+    "last": "Agarwal",
+    "tagline": "I build projects and write code. Apps, tools and experiments, shipped one level at a time."
+  },
+  "projects": [
+    {
+      "title": "Pet Lost & Found QR",
+      "description": "Scan a pet's QR tag to see its profile and reach its owner. Built for an app development competition.",
+      "tags": [
+        "HTML",
+        "QR",
+        "Competition"
+      ],
+      "led": false
+    },
+    {
+      "title": "16x16 WS2812B Display",
+      "description": "A 256-pixel addressable RGB LED matrix. Live preview above.",
+      "tags": [
+        "WS2812B",
+        "LED matrix",
+        "Hardware"
+      ],
+      "led": true
+    },
+    {
+      "title": "Pi Zero W Stream Deck",
+      "description": "A custom button deck built on a Raspberry Pi Zero W to trigger actions with one press.",
+      "tags": [
+        "Raspberry Pi",
+        "Pi Zero W",
+        "Hardware"
+      ],
+      "led": false
+    }
+  ],
+  "gallery": [],
+  "contact": {
+    "text": "Code, builds and socials. Get in touch."
+  },
+  "links": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/"
+    },
+    {
+      "label": "Instructables",
+      "url": "https://www.instructables.com/"
+    },
+    {
+      "label": "Instagram",
+      "url": "#"
+    },
+    {
+      "label": "YouTube",
+      "url": "#"
+    },
+    {
+      "label": "Discord",
+      "url": "#"
+    },
+    {
+      "label": "Email",
+      "url": "mailto:you@example.com"
+    }
+  ],
+  "footer": "© 2026 Arnim Agarwal. Built with caffeine and cyan."
+}
