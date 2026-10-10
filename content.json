@@ -39,7 +39,7 @@
       "title": "MagicMirror",
       "description": "A smart mirror making life easier.",
       "tags": [
-        "Raspberry pi 3B+",
+        "Raspberry Pi 3B+",
         "1080P Display",
         "Hardware"
       ],
@@ -49,6 +49,14 @@
   "gallery": [
     {
       "image": "/images/uploads/IMG_7221.jpg",
+      "alt": ""
+    },
+    {
+      "image": "/images/uploads/IMG_7224.JPG",
+      "alt": ""
+    },
+    {
+      "image": "/images/uploads/IMG_7223.JPG",
       "alt": ""
     }
   ],
@@ -74,7 +82,7 @@
     },
     {
       "label": "Discord",
-      "url": "https://discord.com/1321366415424356352"
+      "url": "https://discord.com/users/1321366415424356352"
     },
     {
       "label": "Email",
