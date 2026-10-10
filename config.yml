@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: YOUR-GITHUB-USERNAME/YOUR-REPO-NAME   # change this
+  repo: myalgorithmicvoid/arnim-site   # change this
   branch: main
 media_folder: images/uploads
 public_folder: /images/uploads
