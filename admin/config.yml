@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: YOUR-USERNAME/YOUR-REPO-NAME
+  repo: myalgorithmicvoid/arnim-site
   branch: main
 media_folder: images/uploads
 public_folder: images/uploads
