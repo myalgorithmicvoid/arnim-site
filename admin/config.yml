@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: myalgorithmicvoid/arnim-site   # change this
+  repo: YOUR-USERNAME/YOUR-REPO-NAME
   branch: main
 media_folder: images/uploads
 public_folder: images/uploads
@@ -36,7 +36,6 @@ collections:
             fields:
               - {label: Photo, name: image, widget: image}
               - {label: Caption, name: alt, widget: string, required: false}
-              
           - label: Contact
             name: contact
             widget: object
@@ -50,7 +49,7 @@ collections:
               - {label: Name, name: label, widget: string}
               - {label: URL (https://... or mailto:...), name: url, widget: string}
           - {label: Footer text, name: footer, widget: string}
-                    - label: Status panel
+          - label: Status panel
             name: status
             widget: object
             required: false
