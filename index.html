@@ -105,9 +105,9 @@ footer{padding:50px 5vw 70px;text-align:center;color:var(--mu);font-size:13px;bo
   <h2>Contact</h2>
   <p class="lede" id="ctext"></p>
   <div class="cwrap">
-  <form class="cf" id="cf" name="contact" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field">
-    <input type="hidden" name="form-name" value="contact">
-    <label class="hp" aria-hidden="true">Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+  <form class="cf" id="cf">
+    <input type="hidden" name="subject" value="New message from your website"><input type="hidden" name="from_name" value="Arnim website">
+    <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
     <label>Name <input name="name" required maxlength="80" autocomplete="name"></label>
     <label>Email <input type="email" name="email" required maxlength="120" autocomplete="email"></label>
     <label>Message <textarea name="message" rows="5" required maxlength="2000"></textarea></label>
@@ -150,9 +150,12 @@ var lb=$("lb");
 document.addEventListener("click",function(e){var f=e.target.closest&&e.target.closest(".gal figure");if(!f)return;var i=f.querySelector("img");if(!i)return;lb.textContent="";var n=el("img");n.src=i.src;n.alt=i.alt;lb.appendChild(n);lb.classList.add("on")});
 lb.onclick=function(){lb.classList.remove("on")};
 addEventListener("keydown",function(e){if(e.key=="Escape")lb.classList.remove("on")});
-$("cf").addEventListener("submit",function(e){e.preventDefault();var f=this,s=$("fs");s.textContent="Sending...";
-fetch("/",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:new URLSearchParams(new FormData(f)).toString()})
-.then(function(r){if(!r.ok)throw 0;f.reset();s.textContent="Message sent. Thanks, I'll get back to you!"})
+var WEB3KEY="9265e19c-bed2-4a2d-bada-7d11cf660f3f";
+$("cf").addEventListener("submit",function(e){e.preventDefault();var f=this,s=$("fs");
+if(!WEB3KEY){s.textContent="The form is not set up yet.";return}
+s.textContent="Sending...";var b=Object.fromEntries(new FormData(f));b.access_key=WEB3KEY;
+fetch("https://api.web3forms.com/submit",{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify(b)})
+.then(function(r){return r.json()}).then(function(j){if(!j.success)throw 0;f.reset();s.textContent="Message sent. Thanks, I'll get back to you!"})
 .catch(function(){s.textContent="Could not send. Please try again or use the links below."})});
 var rs="i",rt,rm,rx=$("rx"),best=0;
 try{best=+localStorage.getItem("rxbest")||0}catch(e){}
