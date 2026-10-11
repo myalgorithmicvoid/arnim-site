@@ -58,6 +58,10 @@
     {
       "image": "/images/uploads/IMG_7223.JPG",
       "alt": ""
+    },
+    {
+      "image": "/images/uploads/IMG_4038.JPG",
+      "alt": ""
     }
   ],
   "contact": {
@@ -89,5 +93,6 @@
       "url": "mailto:arnimagarwal32@gmail.com"
     }
   ],
-  "footer": "© 2026 Arnim Agarwal. Built with caffeine and cyan."
+  "footer": "© 2026 Arnim Agarwal. Built with caffeine and cyan.",
+  "status": null
 }
