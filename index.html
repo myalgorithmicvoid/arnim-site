@@ -138,7 +138,7 @@ if(p.led){c=el("canvas");c.id="led";c.width=160;c.height=160;c.setAttribute("ari
 a.appendChild(el("h3",0,p.title));a.appendChild(el("p",0,p.description));
 (p.tags||[]).forEach(function(g){a.appendChild(el("span","tag",g))});pg.appendChild(a);if(c)startLed(c)});
 var gl=$("gl"),G=d.gallery||[];gl.textContent="";
-G.forEach(function(g){var f=el("figure"),m=el("img");m.src=g.image;m.alt=g.alt||"";m.loading="lazy";f.appendChild(m);gl.appendChild(f)});
+G.forEach(function(g){var f=el("figure"),m=el("img");m.src=String(g.image||"").replace(/^\//,"");m.alt=g.alt||"";m.loading="lazy";f.appendChild(m);gl.appendChild(f)});
 $("gallery").hidden=!G.length;$("gnav").hidden=!G.length;
 $("ctext").textContent=(d.contact||{}).text||"";
 var S=d.status||{};$("st").textContent=S.state||"Open to collabs and cool projects";$("bl").textContent=S.building||"Pet Lost & Found QR, an app for a development competition";
